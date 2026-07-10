@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+
+# Testing and Coverage
+coverage/
+.jest/
+
+# Production Builds
+dist/
+.next/
+out/
+build/
+
+# IDE and System Files
+.DS_Store
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
