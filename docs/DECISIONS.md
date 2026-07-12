@@ -26,7 +26,7 @@ Format per entry: **Date | Decision | Alternatives considered | Why | Revisit if
 
 ### ADR-003: Photo storage — Cloudinary/S3-compatible, not local disk
 
-**Date:** 2026-07-10  
+**Date:** 2026-07-10
 **Decision:** Store uploaded photos in a cloud object store from day one; reference URLs in `status_events.evidence_url`.  
 **Alternatives considered:** Local filesystem storage during early development, migrate later.  
 **Why:** Docker containers are ephemeral — local disk storage doesn't survive a rebuild, and "migrate later" tends to mean "fight with existing data later." Deciding this in Phase 0 avoids a schema/rewrite cost in week 6.  
