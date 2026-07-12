@@ -16,12 +16,12 @@ Every report moves through a state machine that requires community verification 
 
 ## 3. Target Users
 
-| User type | Need |
+|User type|Need|
 |---|---|
-| Resident | Report an issue near them, verify others' reports, dispute fake resolutions |
-| Verified Reporter (NGO/RWA member) | Higher-trust actions — faster verification, acknowledgment of agency routing |
-| Journalist / NGO researcher | Public, linkable, structured data on ward-level failures |
-| Moderator | Light oversight — flag abuse, verify verified-reporter accounts |
+|Resident|Report an issue near them, verify others' reports, dispute fake resolutions|
+|Verified Reporter (NGO/RWA member)|Higher-trust actions — faster verification, acknowledgment of agency routing|
+|Journalist / NGO researcher|Public, linkable, structured data on ward-level failures|
+|Moderator|Light oversight — flag abuse, verify verified-reporter accounts|
 
 ## 4. Non-Goals (explicitly out of scope for v1)
 
