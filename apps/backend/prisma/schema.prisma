@@ -26,5 +26,15 @@ model Report {
   createdAt DateTime @default(now())
 }
 
+model StatusEvent{
+  id        String    @id @default(uuid())
+  reportId    String
+  fromStatus  String?
+  toStatus    String
+  actorId     String
+  evidenceUrl String?
+  createdAt   DateTime @default(now())
+}
+
 
 
