@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 
 // 1. GET /health - To check if our API is running
-app.get('/health', (req, res) => {
+app.get('/', (req, res) => {
   res.json({ status: 'OK', message: 'civicPulse API is running' });
 });
 
@@ -47,6 +47,11 @@ app.post('/reports', async (req, res) => {
   }
 });
 
+//Fallback for non-existent routes
+app.use((req, res) => {
+    res.status(404).json({error : 'Route not found'});
+});
+
 app.listen(PORT, () => {
-  console.log(`🚀 Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
