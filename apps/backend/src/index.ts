@@ -20,6 +20,12 @@ const PORT = process.env.PORT || 3000;
 // This middleware allows Express to parse JSON bodies in requests
 app.use(express.json());
 
+// Simple request logging middleware
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  next();
+});
+
 // 1. GET /health - To check if our API is running
 app.get('/', (req, res) => {
   res.json({ status: 'OK', message: 'civicPulse API is running' });
