@@ -35,6 +35,14 @@ app.get('/', (req, res) => {
 app.post('/reports', async (req, res) => {
   const { category, latitude, longitude, photoUrl, createdBy } = req.body;
 
+  // Basic validation for latitude and longitude
+  const lat = parseFloat(latitude);
+  const lng = parseFloat(longitude);
+
+  if (isNaN(lat) || isNaN(lng)) {
+    return res.status(400).json({ error: 'Latitude and longitude must be valid numbers' });
+  }
+
   try {
     const newReport = await prisma.report.create({
       data: {
